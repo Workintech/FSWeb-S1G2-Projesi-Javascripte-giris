@@ -202,7 +202,7 @@ function sa(){
   console.log('Kodlar çalışıyor');
   return 'as';
 }
-foo();
+sa();
 /* Bu satırdan sonrasını değiştirmeyin */
 module.exports = {
   sa,
