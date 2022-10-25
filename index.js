@@ -20,6 +20,13 @@ Aşağıdakileri yapın:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
+let surucuYasi = 20;
+
+if(surucuYasi > 18){
+  console.log(true);
+}else{
+  console.log(false);
+}
 
 
 /*
@@ -34,8 +41,13 @@ Aşağıdakileri yapınız:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
+let birinciDeger = 15;
+let ikinciDeger = 20;
 
-
+if(birinciDeger < ikinciDeger){
+  birinciDeger = 30;
+  console.log(birinciDeger);
+}
 
 
 /*
@@ -61,9 +73,11 @@ Aşağıdakileri yapın:
    3. a ve b'yi çarpıp, sonucu dönün
 */
 
-function carpma(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function carpma(a,b){
+  return a * b;
 }
+
+console.log(carpma(10, 5));
 
 
 
@@ -77,9 +91,12 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function kopeginYasi(insanYasi){
+  let kopekYas = insanYasi * 7;
+  return kopekYas;
 }
+
+console.log(kopeginYasi(20));
 
 
 
@@ -104,9 +121,48 @@ Aşağıdakileri oyun isimli fonksiyonu kullanarak yapın.
 OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı yener | veya beraberlik olur.
 */
 
+
+
+
+
 function oyun(oyuncu, bilgisayar){
-  /*buraya kodunu yazabilirsin*/
+  let gecerDurum;
+  
+  if(oyuncu == bilgisayar){
+    gecerDurum = "Beraberlik";
+  } else if(oyuncu == "Taş" && bilgisayar == "Makas"){
+    gecerDurum = "Kazandın!";
+  } else if(oyuncu == "Taş" && bilgisayar == "Kağıt"){
+    gecerDurum = "Kaybettin!";
+  } else if(oyuncu == "Kağıt" && bilgisayar == "Taş"){
+    gecerDurum = "Kazandın!";
+  } else if(oyuncu == "Kağıt" && bilgisayar == "Makas"){
+    gecerDurum = "Kaybettin!";
+  } else if(oyuncu == "Makas" && bilgisayar == "Kağıt"){
+    gecerDurum = "Kazandın!";
+  } else if(oyuncu == "Makas" && bilgisayar == "Taş"){
+    gecerDurum = "Kaybettin!";
+  } 
+
+  console.log(bilgisayar);
+  return gecerDurum;
 }
+
+function pcSecim (oyuncu){
+  let bilgisayarSecim = Math.random();
+  let bilgisayar;
+  if(bilgisayarSecim < 0.33){
+    bilgisayar = "Taş";
+  }else if(bilgisayarSecim >= 0.33 && bilgisayarSecim < 0.66){
+    bilgisayar = "Kağıt";
+  }else if(bilgisayarSecim >= 0.66 && bilgisayarSecim <= 1){
+    bilgisayar = "Makas";
+  }
+  return oyun(oyuncu , bilgisayar);
+}
+
+
+console.log(pcSecim("Makas"));
 
 
 
@@ -120,9 +176,11 @@ Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function milDonusturucu(kiloMeter){
+  return kiloMeter * 0.621;
 }
+
+console.log(milDonusturucu(10));
 
 
 
@@ -134,9 +192,12 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 3. feet değerini geri dönün
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function feetDonusturucu(centiMeter){
+  let feet = centiMeter * 0.0329;
+  return feet;
 }
+
+console.log(feetDonusturucu(100));
 
 
 
@@ -153,9 +214,20 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/){
-      /*buraya kodunu yazabilirsin*/
+function cocukSarkisi(maymunSayisi){ 
+  let metin = maymunSayisi + " küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!";
+  return metin;
 }
+
+for(let i = 5; i > 0; i--){
+  
+  console.log(cocukSarkisi(i));
+}
+
+
+
+
+
 
 
 /* Görev 6 : Not Hesaplayıcı */
@@ -173,9 +245,27 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/){
-/*buraya kodunu yazabilirsin*/
+function notHesapla(not){
+  
+  let notText;
+
+  if(not < 60){
+    notText = "F aldın";
+  }else if(not < 70){
+    notText = "D aldın" ;
+  }else if(not < 80){
+    notText = "C aldın" ;
+  }else if(not < 90){
+    notText = "B aldın" ;
+  }else if(not <=100){
+    notText = "A aldın" ;
+  }
+  
+  return notText;
+
 }
+
+console.log(notHesapla(75));
 
 
 
