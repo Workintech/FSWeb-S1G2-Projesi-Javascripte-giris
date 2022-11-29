@@ -33,7 +33,8 @@ VSCode, Codegrade ve Command Line araçları kullanarak:
 3. LÜTFEN BRANCH OLUŞTURMAYINIZ! Bu projede main branch'ine push'layacaksın
 4. Repo'nuzun olduğu klasöre gidin (`cd REPO_ADI`)
 5. Vs code'da terminali açın ve `npm install` yazın ve çalıştırın
-6. Sonra `npm run test` yazın ve çalıştırın
+6. npm install işlemi bittikten sonra, `npm start` yazarak projeyi çalıştırın
+7. Sonra `npm run test` yazın ve çalıştırın
 ![alt text](assets/npm_run_test.png "npm run test")
 
 
