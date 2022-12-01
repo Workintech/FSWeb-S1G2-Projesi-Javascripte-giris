@@ -216,10 +216,11 @@ Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
 */
 
 function milDonusturucu(km/*buraya kodunu yazabilirsin*/){
-  return km * 0.62137/*buraya kodunu yazabilirsin*/
- }
- milDonusturucu(10)
-console.log(milDonusturucu(10))
+  return km * 0.621371/*buraya kodunu yazabilirsin*/
+  
+}
+console.log(milDonusturucu(10)) 
+
 
 //Görev 4b - Santimetreden Feet
 /*
@@ -248,7 +249,7 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 */
 
 function cocukSarkisi(x){
-  return x + "küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!"
+  return x + " küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!"
   
 }
   for(let i=5; i>0; i--){
@@ -271,22 +272,27 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  dönün
 */
 
-console.clear()
-function notHesapla(not){
-  if (not>=90 && not<=100){
-    console.log("A aldın");
-  }else if (not>=80 && not<=89){
-      console.log("B aldın");
-  }else if (not>=70 && not <=79){
-      console.log("C aldın");
-  }else if (not>=60 && not <=69){
-      console.log("D aldın");
-  }else{
-      console.log("F aldın");
+
+function notHesapla(p) {
+  var harfnot;
+  if (p >= 90 && p <= 100) {
+    harfnot = "A aldın";
   }
-    return not
+  if (p >= 80 && p <= 89) {
+    harfnot = "B aldın";
+  }
+  if (p >= 70 && p <= 79) {
+    harfnot = "C aldın";
+  }
+  if (p >= 60 && p <= 69) {
+    harfnot = "D aldın";
+  }
+  if (p < 60) {
+    harfnot = "F aldın";
+  }
+  return harfnot;
 }
-console.log(notHesapla(85))
+console.log(notHesapla(65));
 
 
 
