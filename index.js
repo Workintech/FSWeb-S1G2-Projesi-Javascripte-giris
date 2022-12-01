@@ -1,5 +1,67 @@
 /* Görev 1: Isınalım Biraz :) */
+//var
+var isim = 'Samet'
+console.log(isim)
+isim = 'Ece'
+console.log(isim) // var ile değişken tanımladığımız için sorun çıkmayacaktır.
+//let
+let age = 31
+console.log(age)
+age = 27
+console.log(age) // let ile değiken atadığımız için sorun çıkmayacaktır .
+//const
+const food = 'Döner'
+console.log(food)
+food == 'kebap'
+console.log(food) // const ile değişken atadığımız için döneri okuyacaktır ama kebap olarak değiştirmeyecektir.
 
+//if else
+const w=20;  
+if(w>10){  
+console.log("büyüktür");  
+}  
+
+const r=9;  
+if(r>10){  
+console.log("büyüktür");  
+} else{
+  console.log('küçüktür')
+}  
+
+const t=14;  
+if(t>20){  
+console.log("10 yaşından büyüksün");  
+} else if (t>15){
+  console.log('15 yaşından büyüksün')
+  }else{
+  console.log('15 yaşından küçüksün')
+}  
+// loop while
+let i = 1, n = 5;
+while (i <= n) {
+    console.log(i);
+    i += 1;
+}
+
+for (i=1; i<20; i++){
+  console.log(i)
+}
+ //function
+
+ function merhaba() {
+  console.log('this is my function!')
+}
+merhaba();
+
+const toplam = function(a,b){
+  return a + b;
+ }
+ toplam(2,4) 
+
+const bolme = (a,b) => {
+  return a / b;
+ }
+ bolme(2,4) 
 /* TÜM CEVAPLARINI BİR FUNCTION İÇİNDE VERDİĞİNİZDEN EMİN OLUNUZ (GÖREV 1D - GÖREV 6). AKSİ TAKTİRDE, OTOMATİK TEST SİSTEMİ ÇALIŞMAYACAKTIR. */
 
 // Görev 1a, 1b ve 1c puanlamaya dahil değildir
@@ -19,8 +81,12 @@ Aşağıdakileri yapın:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
-
-
+let surucuYasi = 20
+if(surucuYasi>18){
+  console.log('True')
+}else{
+  console.log('False')
+}
 
 /*
 Görev 1b - Değerler (puanlamaya dahil değildir)
@@ -33,10 +99,13 @@ Aşağıdakileri yapınız:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
-
-
-
-
+console.clear()
+let birinciDeger =10
+let ikinciDeger = 10
+if(birinciDeger===ikinciDeger){
+  birinciDeger=15
+}
+ console.log(birinciDeger)
 
 /*
 Görev 1c - String bir değeri Number'a dönüştürün (puanlamaya dahil değildir)
@@ -48,9 +117,9 @@ Aşağıdakileri yapın:
 
    İPUCU: Number metoduna bakabilirsin
 */
-
-
-
+let string = '1999';
+let number = + string;
+console.log(number)
 
 /*
 Görev 1d - Çarpma
@@ -61,10 +130,10 @@ Aşağıdakileri yapın:
    3. a ve b'yi çarpıp, sonucu dönün
 */
 
-function carpma(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function carpma(a,b){
+ return a*b; 
 }
-
+console.log(carpma(2,4))
 
 
 
@@ -77,10 +146,10 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function kopeginYasi(insanYasi/*buraya kodunu yazabilirsin*/){
+ return insanYasi*7; /*buraya kodunu yazabilirsin*/
 }
-
+console.log(kopeginYasi(2))
 
 
 /* Görev 3 */
@@ -104,11 +173,37 @@ Aşağıdakileri oyun isimli fonksiyonu kullanarak yapın.
 OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı yener | veya beraberlik olur.
 */
 
-function oyun(oyuncu, bilgisayar){
-  /*buraya kodunu yazabilirsin*/
+console.clear()
+function bilgisayar(){
+  let deger =Math.ceil(Math.random()*3);
+  let sonuc = "";
+  if (deger===1){
+    sonuc = "Taş";
+  }else if (deger===2){
+    sonuc = "Kağıt";
+  }else{
+    sonuc = "Makas";
+  }
+  return sonuc;
 }
 
-
+ let sonuc1 = "Kazandın!";
+ let sonuc2 = "Kaybettin!";
+ let sonuc3 = "Beraberlik";
+function oyun(oyuncu, bilgisayarHamlesi){
+ if ((oyuncu === "Taş" && bilgisayarHamlesi === "Makas") ||
+    (oyuncu === "Makas" && bilgisayarHamlesi === "Kağıt") ||
+    (oyuncu === "Kağıt" && bilgisayarHamlesi === "Taş")){
+      return sonuc1;
+    }else if (oyuncu === bilgisayarHamlesi){
+      return sonuc3;
+    }else {
+      return sonuc2;
+    }    
+}
+let bh = bilgisayar();
+console.log(bh);
+console.log(oyun("Makas", bh)) /*buraya kodunu yazabilirsin*/
 
 /* Görev 4 : Metrik Dönüştürücü */
 
@@ -120,11 +215,11 @@ Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
-}
-
-
+function milDonusturucu(km/*buraya kodunu yazabilirsin*/){
+  return km * 0.62137/*buraya kodunu yazabilirsin*/
+ }
+ milDonusturucu(10)
+console.log(milDonusturucu(10))
 
 //Görev 4b - Santimetreden Feet
 /*
@@ -134,11 +229,10 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 3. feet değerini geri dönün
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
-}
-
-
+function feetDonusturucu(cm/*buraya kodunu yazabilirsin*/){
+ return cm/30.48; /*buraya kodunu yazabilirsin*/
+ }
+console.log(feetDonusturucu(1000))
 
 /* Görev 5 : 5 küçük maymun yatakta zıplamış şarkısını çocuklar için hazırladığımızı varsayalım. https://www.youtube.com/watch?v=e4EJ34xnlxk */
 
@@ -153,9 +247,13 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/){
-      /*buraya kodunu yazabilirsin*/
+function cocukSarkisi(x){
+  return x + "küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!"
+  
 }
+  for(let i=5; i>0; i--){
+    console.log(cocukSarkisi(i))  
+  } 
 
 
 /* Görev 6 : Not Hesaplayıcı */
@@ -173,9 +271,23 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/){
-/*buraya kodunu yazabilirsin*/
+console.clear()
+function notHesapla(not){
+  if (not>=90 && not<=100){
+    console.log("A aldın");
+  }else if (not>=80 && not<=89){
+      console.log("B aldın");
+  }else if (not>=70 && not <=79){
+      console.log("C aldın");
+  }else if (not>=60 && not <=69){
+      console.log("D aldın");
+  }else{
+      console.log("F aldın");
+  }
+    return not
 }
+console.log(notHesapla(85))
+
 
 
 
@@ -190,11 +302,15 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yapın.
 İPUCU - .includes() methoduna bakabilirsin. (https://www.w3schools.com/jsref/jsref_includes.asp)
 */
 
-
-function sesliHarfSayaci(/*buraya kodunu yazabilirsin*/) {
+let a="Telekomünikasyon"
+function sesliHarfSayaci(a) {
+   {
+    let m = a.match(/[aeıioöuü]/gi);
+    return m 
   /*buraya kodunu yazabilirsin*/
 }
-
+}
+console.log(sesliHarfSayaci(a))
 
 
 /* Lütfen bu satırın alt tarafını değiştirmeyin */
