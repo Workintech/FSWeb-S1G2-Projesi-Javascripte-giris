@@ -20,6 +20,12 @@ Aşağıdakileri yapın:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
+var surucuYasi = 22
+if (surucuYasi>=18){
+  console.log("True")
+}else{
+  console.log("False")
+}
 
 
 /*
@@ -33,8 +39,15 @@ Aşağıdakileri yapınız:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
+var a = 3;
+var b = 4; 
+if (b>a){
+   function c(){
+     var a = b ;
+       console.log(c);
+   }
 
-
+}
 
 
 
@@ -49,6 +62,9 @@ Aşağıdakileri yapın:
    İPUCU: Number metoduna bakabilirsin
 */
 
+var b = "1999" ;
+b = Number.parseInt("1999"); 
+console.log(b);
 
 
 
@@ -61,9 +77,10 @@ Aşağıdakileri yapın:
    3. a ve b'yi çarpıp, sonucu dönün
 */
 
-function carpma(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function carpma(a,b) {
+  return (a*b);
 }
+carpma(3,7)
 
 
 
@@ -77,10 +94,10 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+ const kopeginYasi = function(a,b){
+  return(a*b);
 }
-
+kopeginYasi(3,7)
 
 
 /* Görev 3 */
@@ -91,7 +108,10 @@ Aşağıdakileri yapın:
 1. Bilgisayarın seçimini rastgele oluşturacağımız bir değişken tanımlayın (bu fonksiyon içinde yaratılmalı)
 2. Math.random'ı kullanarak bilgisayarın seçimini oluşturun (Math.random 0-1 arasında bir değer verecek)
 3. Bu rastgele değeri "Taş", "Kağıt" veya "Makas"a dönüştüren bir koşul oluşturun
+*/
 
+
+/*
 Aşağıdakileri oyun isimli fonksiyonu kullanarak yapın.
 1. 2 parametre alın: oyuncunun tercihini alan bir string değer: "Taş", "Kağıt" veya "Makas" 
    ve bilgisayarınkini alan: "Taş", "Kağıt" veya "Makas"
@@ -104,11 +124,23 @@ Aşağıdakileri oyun isimli fonksiyonu kullanarak yapın.
 OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı yener | veya beraberlik olur.
 */
 
-function oyun(oyuncu, bilgisayar){
-  /*buraya kodunu yazabilirsin*/
+let sonuc1 = “Kazandın!“;
+ let sonuc2 = “Kaybettin!“;
+ let sonuc3 = “Beraberlik”;
+function oyun(oyuncu, bilgisayarHamlesi){
+ if ((oyuncu === “Taş” && bilgisayarHamlesi === “Makas”) ||
+    (oyuncu === “Makas” && bilgisayarHamlesi === “Kağıt”) ||
+    (oyuncu === “Kağıt” && bilgisayarHamlesi === “Taş“)){
+      return sonuc1;
+    }else if (oyuncu === bilgisayarHamlesi){
+      return sonuc3;
+    }else {
+      return sonuc2;
+    }
 }
-
-
+let bh = bilgisayar();
+console.log(bh);
+console.log(oyun(“Makas”, bh));
 
 /* Görev 4 : Metrik Dönüştürücü */
 
@@ -120,9 +152,10 @@ Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function milDonusturucu(km) {
+  return(km/0.621371);
 }
+
 
 
 
@@ -134,8 +167,8 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 3. feet değerini geri dönün
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function feetDonusturucu(cm) {
+  return(cm/30.48);
 }
 
 
@@ -153,10 +186,12 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/){
-      /*buraya kodunu yazabilirsin*/
+function cocukSarkisi(x){
+  return x + ” küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!”
 }
-
+  for(let i=5; i>0; i--){
+    console.log(cocukSarkisi(i))
+  }
 
 /* Görev 6 : Not Hesaplayıcı */
 
@@ -173,10 +208,26 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/){
-/*buraya kodunu yazabilirsin*/
+function notHesapla(p) {
+  var harfnot;
+  if (p >= 90 && p <= 100) {
+    harfnot = "A aldın";
+  }
+  if (p >= 80 && p <= 89) {
+    harfnot = "B aldın";
+  }
+  if (p >= 70 && p <= 79) {
+    harfnot = "C aldın";
+  }
+  if (p >= 60 && p <= 69) {
+    harfnot = "D aldın";
+  }
+  if (p < 60) {
+    harfnot = "F aldın";
+  }
+  return harfnot;
 }
-
+console.log(notHesapla(65));
 
 
 /* Bonus Çalışma: Sesli harf sayacı - Kaç tane sesli harf var? */
