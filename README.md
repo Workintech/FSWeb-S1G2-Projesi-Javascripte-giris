@@ -1,3 +1,5 @@
+npm install
+
 # JavaScript'e Giriş
 
 Bu "sprint 1 - gün 2" projesi görevini kendi başınıza yapmanız beklenmektedir. Daha önce eğitmen eşliğinde adım adım yapılan projenin biraz daha genişletilmiş halidir.

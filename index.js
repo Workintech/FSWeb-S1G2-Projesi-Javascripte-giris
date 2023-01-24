@@ -20,6 +20,16 @@ Aşağıdakileri yapın:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
+const surucuYasi = 38 ;
+  if (surucuYasi > 18) {
+    console.log("True");
+  }
+  else {
+    console.log("False");
+  }
+
+
+
 
 
 /*
@@ -33,7 +43,11 @@ Aşağıdakileri yapınız:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
-
+ let birinciDeger = 18;
+ let ikinciDeger = 35;
+ if (birinciDeger =! ikinciDeger) {
+  birinciDeger = 40; console.log(birinciDeger)
+ }
 
 
 
@@ -61,10 +75,11 @@ Aşağıdakileri yapın:
    3. a ve b'yi çarpıp, sonucu dönün
 */
 
-function carpma(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function carpma(a, b) {
+  return (a * b);
 }
 
+console.log('hello');
 
 
 
@@ -77,8 +92,8 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function kopeginYasi(insanYasi){
+  return insanYasi * 7;
 }
 
 
@@ -120,8 +135,9 @@ Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function milDonusturucu(km){
+  return km * 0.621371;
+
 }
 
 
@@ -134,8 +150,9 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 3. feet değerini geri dönün
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function feetDonusturucu(cm){
+  return cm / 30.48;
+
 }
 
 
@@ -153,9 +170,17 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/){
-      /*buraya kodunu yazabilirsin*/
+
+
+function cocukSarkisi(mn){
+  {
+    console.log(mn,'küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!')
+  }
 }
+cocukSarkisi(5);
+
+
+
 
 
 /* Görev 6 : Not Hesaplayıcı */
@@ -173,9 +198,24 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/){
-/*buraya kodunu yazabilirsin*/
-}
+function notHesapla(X){
+  if (X >= 90 && X <= 100) {
+    return("A aldın");
+  }
+    else if (X >= 80 && X <= 89) {
+    return("B aldın");
+  }
+    else if (X >= 70 && X <= 79) {
+    return("C aldın"); 
+    }
+      else if (X >= 60 && X <= 69) {
+    return("D aldın"); 
+    }
+      else {
+    return("F aldın"); 
+    }
+  }
+  notHesapla(40);
 
 
 
