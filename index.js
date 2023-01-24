@@ -19,7 +19,15 @@ Aşağıdakileri yapın:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
-
+const surucuYasi=21;
+if(surucuYasi>18)
+{
+  console.log("true");
+}
+else
+{
+  console.log("false");
+}
 
 
 /*
@@ -34,7 +42,14 @@ Aşağıdakileri yapınız:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
+let birinciDeger=5;
+let ikinciDeger=10;
 
+if(birinciDeger<ikinciDeger)
+{
+  birinciDeger=20;
+}
+console.log(birinciDeger);
 
 
 
@@ -49,6 +64,9 @@ Aşağıdakileri yapın:
    İPUCU: Number metoduna bakabilirsin
 */
 
+let deger="1999";
+deger=Number(deger);
+console.log(deger);
 
 
 
@@ -61,9 +79,12 @@ Aşağıdakileri yapın:
    3. a ve b'yi çarpıp, sonucu dönün
 */
 
-function carpma(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function carpma(a,b){
+  return a*b;
 }
+let x=carpma(5,3);
+console.log(x);
+
 
 
 
@@ -77,9 +98,12 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function kopeginYasi(yas){
+  const insanAge = yas*7;
+  return insanAge;
 }
+let y=kopeginYasi(10);
+console.log(y);
 
 
 
@@ -104,8 +128,35 @@ Aşağıdakileri oyun isimli fonksiyonu kullanarak yapın.
 OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı yener | veya beraberlik olur.
 */
 
+var oppChoice =null;
+var randomNum = Math.floor(Math.random()*3);
+if(randomNum==0)
+{
+  oppChoice= "Taş";
+}
+else if(randomNum==1)
+{
+  oppChoice="Kağıt";
+}
+else 
+{
+  oppChoice="Makas";
+}
+console.log(oppChoice);
 function oyun(oyuncu, bilgisayar){
-  /*buraya kodunu yazabilirsin*/
+  if(oyuncu == bilgisayar)
+  {
+    return 'Beraberlik';
+  }
+  else if((oyuncu=="Taş" && bilgisayar=="Makas") 
+          || (oyuncu=="Makas" && bilgisayar=="Kağıt") 
+          || (oyuncu=="Kağıt" && bilgisayar=="Taş"))
+  {
+    return 'Kazandın!';
+  }
+  else{
+    return 'Kaybettin!';
+  }
 }
 
 
@@ -120,9 +171,11 @@ Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function milDonusturucu(km){
+  return (0.621371) * (km);
 }
+let mil=milDonusturucu(5);
+console.log(mil);
 
 
 
@@ -134,9 +187,11 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 3. feet değerini geri dönün
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function feetDonusturucu(cm){
+  return (cm) / (30.48);
 }
+let feet= feetDonusturucu(100);
+console.log(feet);
 
 
 
@@ -153,10 +208,13 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/){
-      /*buraya kodunu yazabilirsin*/
+function cocukSarkisi(sayi){
+      return sayi+" küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!";
 }
-
+for(let i=5; i>0 ; i--)
+{
+  console.log(cocukSarkisi(i));
+}
 
 /* Görev 6 : Not Hesaplayıcı */
 
@@ -173,9 +231,31 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/){
-/*buraya kodunu yazabilirsin*/
+function notHesapla(note){
+  if(note<=100 && note>=90)
+  {
+    return "A aldın";
+  }
+
+  else if(note<=89 && note>=80)
+  {
+    return "B aldın";
+  }
+  else if(note<=79 && note>=70)
+  {
+    return "C aldın";
+  }
+  else if(note<=69 && note>=60)
+  {
+    return "D aldın";
+  }
+  else
+  {
+    return "F aldın";
+  }
+  return note;
 }
+notHesapla(50);
 
 
 
@@ -191,9 +271,18 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yapın.
 */
 
 
-function sesliHarfSayaci(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function sesliHarfSayaci(yazi) {
+  let sesliHarfler = "aeiıoöuüAEIOU";
+  let sesliHarfSayisi = 0;
+  for (let i = 0; i < yazi.length; i++) 
+  {
+  if (sesliHarfler.includes(yazi[i])) {
+  sesliHarfSayisi++;
+  }
+  }
+  return sesliHarfSayisi; 
 }
+console.log(sesliHarfSayaci("asdasdsadssadsadsaadsaöü"));
 
 
 
