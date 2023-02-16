@@ -14,8 +14,8 @@ Bunu sağlamak için cevabı direk console'a loglayın veya çağırdığınız 
 Görev 1a - Ehliyet Yaşı (puanlamaya dahil değildir)
 
 Aşağıdakileri yapın:   
-   1. surucuYasi diye bir değişken yaratın ve bir sayı atayın.
-   2. Eğer yaş 18'den büyük ise Console'da True, değilse False değeri yazdırın.
+   1. surucuYasi isimli bir değişken yaratın ve bir sayı atayın.
+   2. Eğer yaş 18'den büyük ise Console'da true, değilse false değeri yazdırın.
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
@@ -26,7 +26,7 @@ Aşağıdakileri yapın:
 Görev 1b - Değerler (puanlamaya dahil değildir)
 
 Aşağıdakileri yapınız:   
-   1. 2 değişken oluşturun ve bunlara değerler atayın (isimlendirme olarak birinciDeger ikinciDegeri kullanabilirsin)
+   1. 2 değişken tanımlayın ve bunlara değerler atayın (isimlendirme olarak birinciDeger ikinciDegeri kullanabilirsin)
    2. 1. değeri 2. değer ile karşılaştıran bir koşul oluşturun
    3. 2. adımdaki koşul doğru olduğunda 1. değeri değiştirin
    4. 1. değeri Console'a yazdırın
@@ -42,7 +42,7 @@ Aşağıdakileri yapınız:
 Görev 1c - String bir değeri Number'a dönüştürün (puanlamaya dahil değildir)
 
 Aşağıdakileri yapın:   
-   1. String türünde ve değeri "1999" olan bir değişken oluşturun
+   1. String tipinde ve değeri "1999" olan bir değişken oluşturun
    2. Değeri "1999" olan bu String'i değeri 1999 olan bir integer'a dönüştürün
    3. Sonucu Console'a yazdırın
 
@@ -55,10 +55,10 @@ Aşağıdakileri yapın:
 /*
 Görev 1d - Çarpma
  
-Aşağıdakileri yapın:   
-   1. a ve b olarak 2 değer alın
-   2. Aşağıdaki çarpma fonksiyonunu çağırarak, 2 sayıyı bu fonksiyona iletin
-   3. a ve b'yi çarpıp, sonucu dönün
+Aşağıdakileri yaparak carpma isimli fonksiyonu tamamlayın:   
+   1. a ve b olarak 2 argüman alsın
+   2. a ve b'yi çarpıp, sonucu dönsün
+   3. console.log(carpma(7,4)) ile yazdığınız fonsiyonu test edin. Console'da sonucu 28 olarak görmelisiniz.
 */
 
 function carpma(/*buraya kodunu yazabilirsin*/){
@@ -72,7 +72,7 @@ function carpma(/*buraya kodunu yazabilirsin*/){
 
 /*
 Aşağıdakileri yapın:
- 1. Aşağıdaki fonksiyona bir değer ileterek çalıştırın.
+ 1. Aşağıdaki kopeginYasi fonsiyonunu bir argüman alacak şekilde tanımlayın.
  2. Gelen değeri kullanarak köpeğin yaşını hesaplayın (insanlarda 1 yıl köpeklerde 7 yıla denk gelir)
  3. Hesaplanan köpeğin yaşını dönün.
  */
@@ -114,8 +114,8 @@ function oyun(oyuncu, bilgisayar){
 
 //Görev 4a - Kilometreden Mil
 /*
-Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
-1. Kilometre değerini alın.
+Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamlayın:
+1. Kilometre değerini argüman olarak alın.
 2. Aldığınız bu değeri Mil'e dönüştürün
 3. Mil değerini geri dönün
 */
@@ -129,9 +129,11 @@ function milDonusturucu(/*buraya kodunu yazabilirsin*/){
 //Görev 4b - Santimetreden Feet
 /*
 Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
-1. Santimetre değerini alın.
+1. Santimetre değerini argüman olarak alın.
 2. Aldığınız bu değeri feet'e dönüştürün
 3. feet değerini geri dönün
+
+Google'da arama ipucu: "feet cm dönüştürme"
 */
 
 function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
