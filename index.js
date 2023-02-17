@@ -56,7 +56,7 @@ Aşağıdakileri yapın:
 Görev 1d - Çarpma
  
 Aşağıdakileri yaparak carpma isimli fonksiyonu tamamlayın:   
-   1. a ve b olarak 2 argüman alsın
+   1. 2 argüman alsın(a ve b olarak tanımlayabilirsiniz)
    2. a ve b'yi çarpıp, sonucu dönsün
    3. console.log(carpma(7,4)) ile yazdığınız fonsiyonu test edin. Console'da sonucu 28 olarak görmelisiniz.
 */
@@ -84,16 +84,9 @@ function kopeginYasi(/*buraya kodunu yazabilirsin*/){
 
 
 /* Görev 3 */
-
-// Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
 /*
-Aşağıdakileri yapın:
-1. Bilgisayarın seçimini rastgele oluşturacağımız bir değişken tanımlayın (bu fonksiyon içinde yaratılmalı)
-2. Math.random'ı kullanarak bilgisayarın seçimini oluşturun (Math.random 0-1 arasında bir değer verecek)
-3. Bu rastgele değeri "Taş", "Kağıt" veya "Makas"a dönüştüren bir koşul oluşturun
-
 Aşağıdakileri oyun isimli fonksiyonu kullanarak yapın.
-1. 2 parametre alın: oyuncunun tercihini alan bir string değer: "Taş", "Kağıt" veya "Makas" 
+1. 2 argüman alın: oyuncunun tercihini alan bir string değer: "Taş", "Kağıt" veya "Makas" 
    ve bilgisayarınkini alan: "Taş", "Kağıt" veya "Makas"
    Not: string değerlerin yazımına dikkat! İlk harf büyük ve türkçe karakterler kullanarak. Yoksa testi geçemez.
 2. Aşağıdaki oyun kurallarına göre oyuncunun kazanıp kazanamadığını veya berabere kalıp kalmadığını dönün - (uygulamanın oluşturduğu çıktı tam olarak aşağıdakinin aynısı olmalı)
@@ -108,7 +101,21 @@ function oyun(oyuncu, bilgisayar){
   /*buraya kodunu yazabilirsin*/
 }
 
+// Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
+/*
+Öncelikle aşağıdakileri yapın:
+1. Bilgisayarın seçimini rastgele oluşturacağımız bir fonksiyon tanımlayın. Örn: 
+   function bilgisayarinSecimi() {
+   
+   }
+2. Fonsiyonun içinde bilgisayarın seçimi için bir değişken tanımlayın
+3. Math.random'ı kullanarak bilgisayarın seçimini oluşturun (Math.random 0-1 arasında bir değer verecek)
+4. Bu rastgele değeri "Taş", "Kağıt" veya "Makas"a dönüştüren bir koşul oluşturun
+5. Oluşan değeri geri dönün
 
+Şimdi kendi seçtiğiniz bir seçime karşı bilgisayarın rastgele oluşturduğu seçimi yukarıda yazdığınız oyun fonsiyonu ile oynayın ve sonucu console'a yazdırın.
+Örn: console.log(oyun("Makas",bilgisayarinSecimi()))
+*/
 
 /* Görev 4 : Metrik Dönüştürücü */
 
@@ -147,7 +154,7 @@ function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
 /*
 Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 1. Başlangıçta var olan maymun sayısını alın.
-2. cocukSarkisi fonksiyonu aşağıdaki satırı sadece 1 kere yazdırmalı:
+2. cocukSarkisi fonksiyonu aşağıdaki satırı sadece 1 kere yazacak şekilde kodunuzu yazın:
 
     "{sayı} küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!"
 
@@ -185,7 +192,7 @@ function notHesapla(/*buraya kodunu yazabilirsin*/){
 
 /*
 Aşağıdakileri sesliHarfSayaci fonskiyonunda yapın.
-1. Bir parametre alın, string olsun.
+1. Bir argüman alın, string olsun.
 2. Bu string'in içindeki sesli harfleri sayın ve sayısını geri dönün.  (hem büyük hem de küçük harflerin sayısını dönmeli).
 
 İPUCU - yarın işlenecek array(dizi) konusunu önden araştırman gerekecek. (https://www.w3schools.com/js/js_arrays.asp)
