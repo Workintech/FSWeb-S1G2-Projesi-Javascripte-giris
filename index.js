@@ -282,9 +282,20 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yapın.
 */
 
 
-function sesliHarfSayaci(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function sesliHarfSayaci(metin) {
+  let kucukHarfCumle = metin.toLowerCase();
+  const sesliHarfler = ["a","e","ı","i","o","ö","u","ü"];
+  let sesliHarfSayisi = 0;
+
+  for (let i =0; i<metin.length;i++) {
+    if (sesliHarfler.includes(metin[i])){
+      sesliHarfSayisi++
+    }
+  }
+return sesliHarfSayisi
 }
+console.log(sesliHarfSayaci("Merhaba Dünya!"))
+
 
 
 
