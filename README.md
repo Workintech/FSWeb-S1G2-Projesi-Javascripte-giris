@@ -22,8 +22,8 @@ Alıştırmalarının yönergesini `index.js` dosyasında bulacaksın. Her göre
 
 VSCode, Codegrade ve Command Line araçları kullanarak:
 
-1. Bu repo'yu fork'lay
-2. Frok'ladığınız repo'yu bilgisayarınızda clone'lay
+1. Bu repo'yu fork'la.
+2. Fork'ladığınız repo'yu bilgisayarınızda clone'la.
 3. Bu projede `main` branch'ine push'layacaksın. LÜTFEN BRANCH OLUŞTURMA!
 4. **Repo'nuzun olduğu klasöre gidin** (`cd REPO_ADI`)
 5. Vs Code'da terminali açın ve `npm install` yazın ve çalıştırın. Bunu her projede sadece 1 kere yapacaksınız.
