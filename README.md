@@ -27,6 +27,7 @@ VSCode, Codegrade ve Command Line araçları kullanarak:
 3. Bu projede `main` branch'ine push'layacaksın. LÜTFEN BRANCH OLUŞTURMA!
 4. **Repo'nuzun olduğu klasöre gidin** (`cd REPO_ADI`)
 5. Vs Code'da terminali açın ve `npm install` yazın ve çalıştırın. Bunu her projede sadece 1 kere yapacaksınız.
+not: Bugünkü projede pull request **atmıyorsun**. 
 
 ### Görev 2: MVP
 
