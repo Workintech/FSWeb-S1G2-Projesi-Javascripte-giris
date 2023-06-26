@@ -19,6 +19,12 @@ Aşağıdakileri yap:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
+const surucuYasi = 18;
+if (surucuYasi > 18) {
+  console.log(true);
+} else {
+  console.log(false);
+}
 
 /*
 Görev 1b - Değerler (puanlamaya dahil değildir)
@@ -31,6 +37,12 @@ Aşağıdakileri yap:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
+let birinciDeger = 5;
+const ikinciDeger = 10;
+if (birinciDeger > ikinciDeger) {
+  birinciDeger = 3;
+  console.log(birinciDeger);
+}
 
 /*
 Görev 1c - String bir değeri Number'a dönüştürün (puanlamaya dahil değildir)
@@ -42,6 +54,11 @@ Aşağıdakileri yap:
 
    İPUCU: Number metoduna bakabilirsin
 */
+const stringDeger = "1999";
+console.log(stringDeger);
+
+const numberDeger = Number(stringDeger);
+console.log(numberDeger);
 
 /*
 Görev 1d - Çarpma
@@ -71,7 +88,7 @@ Aşağıdakileri yap:
 function kopeginYasi(num) {
   return num * 7;
 }
-kopeginYasi(5); // 35
+console.log(kopeginYasi(6));
 
 /* Görev 3 */
 /*
@@ -88,12 +105,12 @@ OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı ye
 */
 
 function oyun(oyuncu, bilgisayar) {
-  if (oyuncu == bilgisayar) {
+  if (oyuncu === bilgisayar) {
     return "Beraberlik";
   } else if (
-    (oyuncu == "Taş" && bilgisayar == "Makas") ||
-    (oyuncu == "Makas" && bilgisayar == "Kağıt") ||
-    (oyuncu == "Kağıt" && bilgisayar == "Taş")
+    (oyuncu === "Taş" && bilgisayar === "Makas") ||
+    (oyuncu === "Makas" && bilgisayar === "Kağıt") ||
+    (oyuncu === "Kağıt" && bilgisayar === "Taş")
   ) {
     return "Kazandın!";
   } else {
@@ -119,14 +136,15 @@ function oyun(oyuncu, bilgisayar) {
 */
 function bilgisayarinSecimi(sey) {
   sey = Math.random();
-  if ((sey > 0, 66)) {
+  if (sey > 0.66) {
     return "Makas";
-  } else if ((sey > 0, 33)) {
+  } else if (sey > 0.33) {
     return "Kağıt";
   } else {
     return "Taş";
   }
 }
+console.log(oyun("Makas", bilgisayarinSecimi()));
 
 /* Görev 4 : Metrik Dönüştürücü */
 
@@ -155,12 +173,12 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yap:
 Google'da arama ipucu: "feet cm dönüştürme"
 */
 
-function feetDonusturucu(Santimetre) {
-  const birCm = 0.03228;
-  const feet = Santimetre * birCm;
+function feetDonusturucu(santimetre) {
+  const birFeet = 30.48;
+  const feet = santimetre / birFeet;
   return feet;
 }
-console.log(feetDonusturucu(10));
+console.log(feetDonusturucu(1));
 
 /* Görev 5 : 5 küçük maymun yatakta zıplamış şarkısını çocuklar için hazırladığımı varsayalım. https://www.youtube.com/watch?v=e4EJ34xnlxk */
 
@@ -176,17 +194,14 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yap:
 */
 
 function cocukSarkisi(sayi) {
-  return `${sayi} küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!`;
+  return (
+    sayi +
+    "küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!"
+  );
 }
-
-function maymunSarkisi(maymunSayisi) {
-  while (maymunSayisi >= 1) {
-    cocukSarkisi(maymunSayisi);
-    maymunSayisi--;
-  }
+for (let i = 5; i > 0; i--) {
+  console.log(cocukSarkisi(i));
 }
-
-maymunSarkisi(5);
 
 /* Görev 6 : Not Hesaplayıcı */
 
@@ -216,6 +231,7 @@ function notHesapla(sınavSonucu) {
     return "F aldın";
   }
 }
+console.log(notHesapla(70));
 
 /* Bonus Çalışma: Sesli harf sayacı - Kaç tane sesli harf var? */
 
@@ -228,9 +244,38 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yap.
 İPUCU - .includes() methoduna bakabilirsin. (https://www.w3schools.com/jsref/jsref_includes.asp)
 */
 
-function sesliHarfSayaci(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function sesliHarfSayaci(stringDegeri) {
+  const sesliHarfler = [
+    "A",
+    "E",
+    "İ",
+    "Ö",
+    "Ü",
+    "I",
+    "O",
+    "U",
+    "a",
+    "e",
+    "i",
+    "ö",
+    "ü",
+    "ı",
+    "o",
+    "u",
+  ];
+
+  let sayac = 0;
+  for (let i = 0; i < stringDegeri.length; i++) {
+    const karakter = stringDegeri[i];
+    if (sesliHarfler.includes(karakter)) {
+      sayac++;
+    }
+  }
+  return sayac;
 }
+const stringDegeri = "Bugün hava çok güzel.";
+const sesliHarfler = sesliHarfSayaci(stringDegeri);
+console.log(sesliHarfler);
 
 /* Lütfen bu satırın alt tarafını değiştirmeyin */
 function sa() {
