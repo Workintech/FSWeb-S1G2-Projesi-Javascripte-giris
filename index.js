@@ -124,6 +124,18 @@ function oyun(oyuncu, bilgisayar) {
 oyun("Makas", "Kağıt");
 
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
+function bilgisayarinSecimi() {
+  const secim = Math.round(Math.random() * 10);
+  if (secim <= 3) {
+    return "Taş";
+  } else if (secim >= 4 && secim <= 7) {
+    return "Makas";
+  } else {
+    return "Kağıt";
+  }
+}
+
+oyun("Kağıt",bilgisayarinSecimi());
 /*
 Öncelikle aşağıdakileri yap:
 1. Bilgisayarın seçimini rastgele oluşturacağım bir fonksiyon tanımla. Örn: 
