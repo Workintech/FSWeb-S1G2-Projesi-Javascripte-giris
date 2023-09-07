@@ -19,6 +19,12 @@ Aşağıdakileri yap:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
+const surucuYasi = 21;
+if (surucuYasi > 18) {
+  console.log("true");
+} else {
+  console.log("false");
+}
 
 /*
 Görev 1b - Değerler (puanlamaya dahil değildir)
@@ -31,7 +37,12 @@ Aşağıdakileri yap:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
-
+let birinciDeger = 5;
+let ikinciDeger = 10;
+if (birinciDeger < ikinciDeger) {
+  birinciDeger = ikinciDeger + 1;
+}
+console.log(birinciDeger);
 /*
 Görev 1c - String bir değeri Number'a dönüştürün (puanlamaya dahil değildir)
 
@@ -42,6 +53,9 @@ Aşağıdakileri yap:
 
    İPUCU: Number metoduna bakabilirsin
 */
+let sayi = "1999";
+const numbersayi = sayi * 1;
+console.log(numbersayi);
 
 /*
 Görev 1d - Çarpma
@@ -52,9 +66,11 @@ Aşağıdakileri yaparak carpma isimli fonksiyonu tamamla:
    3. console.log(carpma(7,4)) ile yazdığın fonsiyonu test edin. Console'da sonucu 28 olarak görmelisin.
 */
 
-function carpma(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function carpma(a, b) {
+  const sonuc = a * b;
+  return sonuc;
 }
+console.log(carpma(7, 4));
 
 /* Görev 2 : Köpeğin Yaşı */
 
@@ -65,8 +81,9 @@ Aşağıdakileri yap:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function kopeginYasi(yas) {
+  const hesap = yas * 7;
+  return hesap;
 }
 
 /* Görev 3 */
@@ -84,8 +101,27 @@ OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı ye
 */
 
 function oyun(oyuncu, bilgisayar) {
-  /*buraya kodunu yazabilirsin*/
+  if (oyuncu === "Taş" && bilgisayar === "Makas") {
+    console.log("Kazandın!");
+  } else if (oyuncu === "Taş" && bilgisayar === "Kağıt") {
+    console.log("Kaybettin!");
+  } else if (oyuncu === "Taş" && bilgisayar === "Taş") {
+    console.log("Beraberlik");
+  } else if (oyuncu === "Kağıt" && bilgisayar === "Taş") {
+    console.log("Kazandın!");
+  } else if (oyuncu === "Kağıt" && bilgisayar === "Makas") {
+    console.log("Kaybettin!");
+  } else if (oyuncu === "Kağıt" && bilgisayar === "Kağıt") {
+    console.log("Beraberlik");
+  } else if (oyuncu === "Makas" && bilgisayar === "Taş") {
+    console.log("Kaybettin!");
+  } else if (oyuncu === "Makas" && bilgisayar === "Kağıt") {
+    console.log("Kazandın!");
+  } else if (oyuncu === "Makas" && bilgisayar === "Makas") {
+    console.log("Beraberlik");
+  }
 }
+oyun("Makas", "Kağıt");
 
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
 /*
