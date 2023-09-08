@@ -121,7 +121,7 @@ function oyun(oyuncu, bilgisayar) {
     console.log("Beraberlik");
   }
 }
-oyun("Makas", "Kağıt");
+oyun("Taş", "Kağıt");
 
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
 function bilgisayarinSecimi() {
@@ -135,7 +135,7 @@ function bilgisayarinSecimi() {
   }
 }
 
-oyun("Kağıt", bilgisayarinSecimi());
+oyun("Taş", bilgisayarinSecimi());
 /*
 Öncelikle aşağıdakileri yap:
 1. Bilgisayarın seçimini rastgele oluşturacağım bir fonksiyon tanımla. Örn: 
@@ -162,7 +162,7 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamla:
 */
 
 function milDonusturucu(km) {
-  const kacMil = km * 0.6213711922;
+  const kacMil = km * 0.621371;
   return kacMil;
 }
 console.log(milDonusturucu(2));
@@ -178,11 +178,10 @@ Google'da arama ipucu: "feet cm dönüştürme"
 */
 
 function feetDonusturucu(kacCm) {
-  const kacFeet = kacCm * 0.032808399;
+  const kacFeet = kacCm / 30.48;
   return kacFeet;
 }
-console.log (feetDonusturucu(5));
-
+console.log(feetDonusturucu(5));
 
 /* Görev 5 : 5 küçük maymun yatakta zıplamış şarkısını çocuklar için hazırladığımı varsayalım. https://www.youtube.com/watch?v=e4EJ34xnlxk */
 
@@ -198,11 +197,12 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yap:
 */
 
 function cocukSarkisi(maymunSayisi) {
-  console.log(maymunSayisi + ' küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!');
+  console.log(
+    `${maymunSayisi} küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!`
+  );
 }
-for (let i=5; i>0; i--){
+for (let i = 5; i > 0; i--) {
   cocukSarkisi(i);
-
 }
 
 /* Görev 6 : Not Hesaplayıcı */
@@ -220,10 +220,20 @@ Aşağdakileri notHesapla fonksiyonunda yap.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function notHesapla(alinanNot) {
+  if (100 >= alinanNot && alinanNot >= 90) {
+    console.log("A aldın");
+  } else if (89 >= alinanNot && alinanNot >= 80) {
+    console.log("B aldın");
+  } else if (79 >= alinanNot && alinanNot >= 70) {
+    console.log("C aldın");
+  } else if (69 >= alinanNot && alinanNot >= 60) {
+    console.log("D aldın");
+  } else {
+    console.log("F aldın");
+  }
 }
-
+notHesapla(20);
 /* Bonus Çalışma: Sesli harf sayacı - Kaç tane sesli harf var? */
 
 /*
@@ -235,7 +245,8 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yap.
 İPUCU - .includes() methoduna bakabilirsin. (https://www.w3schools.com/jsref/jsref_includes.asp)
 */
 
-function sesliHarfSayaci(/*buraya kodunu yazabilirsin*/) {
+function sesliHarfSayaci(metin) {
+  return metin.lenght;
   /*buraya kodunu yazabilirsin*/
 }
 
