@@ -135,7 +135,7 @@ function bilgisayarinSecimi() {
   }
 }
 
-oyun("Kağıt",bilgisayarinSecimi());
+oyun("Kağıt", bilgisayarinSecimi());
 /*
 Öncelikle aşağıdakileri yap:
 1. Bilgisayarın seçimini rastgele oluşturacağım bir fonksiyon tanımla. Örn: 
@@ -161,9 +161,11 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamla:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function milDonusturucu(km) {
+  const kacMil = km * 0.6213711922;
+  return kacMil;
 }
+console.log(milDonusturucu(2));
 
 //Görev 4b - Santimetreden Feet
 /*
@@ -175,9 +177,12 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yap:
 Google'da arama ipucu: "feet cm dönüştürme"
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function feetDonusturucu(kacCm) {
+  const kacFeet = kacCm * 0.032808399;
+  return kacFeet;
 }
+console.log (feetDonusturucu(5));
+
 
 /* Görev 5 : 5 küçük maymun yatakta zıplamış şarkısını çocuklar için hazırladığımı varsayalım. https://www.youtube.com/watch?v=e4EJ34xnlxk */
 
@@ -192,8 +197,12 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yap:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function cocukSarkisi(maymunSayisi) {
+  console.log(maymunSayisi + ' küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!');
+}
+for (let i=5; i>0; i--){
+  cocukSarkisi(i);
+
 }
 
 /* Görev 6 : Not Hesaplayıcı */
